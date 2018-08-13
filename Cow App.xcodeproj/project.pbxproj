@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C516763F2121F9DB009840FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C516763E2121F9DB009840FC /* AppDelegate.m */; };
+		C51676422121F9DB009840FC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C51676412121F9DB009840FC /* ViewController.m */; };
+		C51676452121F9DB009840FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C51676432121F9DB009840FC /* Main.storyboard */; };
+		C51676472121F9DC009840FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C51676462121F9DC009840FC /* Assets.xcassets */; };
+		C516764A2121F9DC009840FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C51676482121F9DC009840FC /* LaunchScreen.storyboard */; };
+		C516764D2121F9DC009840FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C516764C2121F9DC009840FC /* main.m */; };
+		C51676572121F9DC009840FC /* Cow_AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C51676562121F9DC009840FC /* Cow_AppTests.m */; };
+		C51676622121F9DC009840FC /* Cow_AppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C51676612121F9DC009840FC /* Cow_AppUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C51676532121F9DC009840FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C51676322121F9DB009840FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C51676392121F9DB009840FC;
+			remoteInfo = "Cow App";
+		};
+		C516765E2121F9DC009840FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C51676322121F9DB009840FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C51676392121F9DB009840FC;
+			remoteInfo = "Cow App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C516763A2121F9DB009840FC /* Cow App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cow App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C516763D2121F9DB009840FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C516763E2121F9DB009840FC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C51676402121F9DB009840FC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C51676412121F9DB009840FC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C51676442121F9DB009840FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C51676462121F9DC009840FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C51676492121F9DC009840FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C516764B2121F9DC009840FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C516764C2121F9DC009840FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C51676522121F9DC009840FC /* Cow AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cow AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C51676562121F9DC009840FC /* Cow_AppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cow_AppTests.m; sourceTree = "<group>"; };
+		C51676582121F9DC009840FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C516765D2121F9DC009840FC /* Cow AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cow AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C51676612121F9DC009840FC /* Cow_AppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cow_AppUITests.m; sourceTree = "<group>"; };
+		C51676632121F9DC009840FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C51676372121F9DB009840FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C516764F2121F9DC009840FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C516765A2121F9DC009840FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C51676312121F9DB009840FC = {
+			isa = PBXGroup;
+			children = (
+				C516763C2121F9DB009840FC /* Cow App */,
+				C51676552121F9DC009840FC /* Cow AppTests */,
+				C51676602121F9DC009840FC /* Cow AppUITests */,
+				C516763B2121F9DB009840FC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C516763B2121F9DB009840FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C516763A2121F9DB009840FC /* Cow App.app */,
+				C51676522121F9DC009840FC /* Cow AppTests.xctest */,
+				C516765D2121F9DC009840FC /* Cow AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C516763C2121F9DB009840FC /* Cow App */ = {
+			isa = PBXGroup;
+			children = (
+				C516763D2121F9DB009840FC /* AppDelegate.h */,
+				C516763E2121F9DB009840FC /* AppDelegate.m */,
+				C51676402121F9DB009840FC /* ViewController.h */,
+				C51676412121F9DB009840FC /* ViewController.m */,
+				C51676432121F9DB009840FC /* Main.storyboard */,
+				C51676462121F9DC009840FC /* Assets.xcassets */,
+				C51676482121F9DC009840FC /* LaunchScreen.storyboard */,
+				C516764B2121F9DC009840FC /* Info.plist */,
+				C516764C2121F9DC009840FC /* main.m */,
+			);
+			path = "Cow App";
+			sourceTree = "<group>";
+		};
+		C51676552121F9DC009840FC /* Cow AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				C51676562121F9DC009840FC /* Cow_AppTests.m */,
+				C51676582121F9DC009840FC /* Info.plist */,
+			);
+			path = "Cow AppTests";
+			sourceTree = "<group>";
+		};
+		C51676602121F9DC009840FC /* Cow AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C51676612121F9DC009840FC /* Cow_AppUITests.m */,
+				C51676632121F9DC009840FC /* Info.plist */,
+			);
+			path = "Cow AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C51676392121F9DB009840FC /* Cow App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C51676662121F9DC009840FC /* Build configuration list for PBXNativeTarget "Cow App" */;
+			buildPhases = (
+				C51676362121F9DB009840FC /* Sources */,
+				C51676372121F9DB009840FC /* Frameworks */,
+				C51676382121F9DB009840FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Cow App";
+			productName = "Cow App";
+			productReference = C516763A2121F9DB009840FC /* Cow App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C51676512121F9DC009840FC /* Cow AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C51676692121F9DC009840FC /* Build configuration list for PBXNativeTarget "Cow AppTests" */;
+			buildPhases = (
+				C516764E2121F9DC009840FC /* Sources */,
+				C516764F2121F9DC009840FC /* Frameworks */,
+				C51676502121F9DC009840FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C51676542121F9DC009840FC /* PBXTargetDependency */,
+			);
+			name = "Cow AppTests";
+			productName = "Cow AppTests";
+			productReference = C51676522121F9DC009840FC /* Cow AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C516765C2121F9DC009840FC /* Cow AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C516766C2121F9DC009840FC /* Build configuration list for PBXNativeTarget "Cow AppUITests" */;
+			buildPhases = (
+				C51676592121F9DC009840FC /* Sources */,
+				C516765A2121F9DC009840FC /* Frameworks */,
+				C516765B2121F9DC009840FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C516765F2121F9DC009840FC /* PBXTargetDependency */,
+			);
+			name = "Cow AppUITests";
+			productName = "Cow AppUITests";
+			productReference = C516765D2121F9DC009840FC /* Cow AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C51676322121F9DB009840FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Eric Rhodes";
+				TargetAttributes = {
+					C51676392121F9DB009840FC = {
+						CreatedOnToolsVersion = 9.4;
+					};
+					C51676512121F9DC009840FC = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = C51676392121F9DB009840FC;
+					};
+					C516765C2121F9DC009840FC = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = C51676392121F9DB009840FC;
+					};
+				};
+			};
+			buildConfigurationList = C51676352121F9DB009840FC /* Build configuration list for PBXProject "Cow App" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C51676312121F9DB009840FC;
+			productRefGroup = C516763B2121F9DB009840FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C51676392121F9DB009840FC /* Cow App */,
+				C51676512121F9DC009840FC /* Cow AppTests */,
+				C516765C2121F9DC009840FC /* Cow AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C51676382121F9DB009840FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C516764A2121F9DC009840FC /* LaunchScreen.storyboard in Resources */,
+				C51676472121F9DC009840FC /* Assets.xcassets in Resources */,
+				C51676452121F9DB009840FC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C51676502121F9DC009840FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C516765B2121F9DC009840FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C51676362121F9DB009840FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C51676422121F9DB009840FC /* ViewController.m in Sources */,
+				C516764D2121F9DC009840FC /* main.m in Sources */,
+				C516763F2121F9DB009840FC /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C516764E2121F9DC009840FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C51676572121F9DC009840FC /* Cow_AppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C51676592121F9DC009840FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C51676622121F9DC009840FC /* Cow_AppUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C51676542121F9DC009840FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C51676392121F9DB009840FC /* Cow App */;
+			targetProxy = C51676532121F9DC009840FC /* PBXContainerItemProxy */;
+		};
+		C516765F2121F9DC009840FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C51676392121F9DB009840FC /* Cow App */;
+			targetProxy = C516765E2121F9DC009840FC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C51676432121F9DB009840FC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C51676442121F9DB009840FC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C51676482121F9DC009840FC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C51676492121F9DC009840FC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C51676642121F9DC009840FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C51676652121F9DC009840FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C51676672121F9DC009840FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G442MF557V;
+				INFOPLIST_FILE = "Cow App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Eric-Rhodes.Cow-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C51676682121F9DC009840FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G442MF557V;
+				INFOPLIST_FILE = "Cow App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Eric-Rhodes.Cow-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C516766A2121F9DC009840FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G442MF557V;
+				INFOPLIST_FILE = "Cow AppTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Eric-Rhodes.Cow-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cow App.app/Cow App";
+			};
+			name = Debug;
+		};
+		C516766B2121F9DC009840FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G442MF557V;
+				INFOPLIST_FILE = "Cow AppTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Eric-Rhodes.Cow-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cow App.app/Cow App";
+			};
+			name = Release;
+		};
+		C516766D2121F9DC009840FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G442MF557V;
+				INFOPLIST_FILE = "Cow AppUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Eric-Rhodes.Cow-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Cow App";
+			};
+			name = Debug;
+		};
+		C516766E2121F9DC009840FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G442MF557V;
+				INFOPLIST_FILE = "Cow AppUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Eric-Rhodes.Cow-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Cow App";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C51676352121F9DB009840FC /* Build configuration list for PBXProject "Cow App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C51676642121F9DC009840FC /* Debug */,
+				C51676652121F9DC009840FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C51676662121F9DC009840FC /* Build configuration list for PBXNativeTarget "Cow App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C51676672121F9DC009840FC /* Debug */,
+				C51676682121F9DC009840FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C51676692121F9DC009840FC /* Build configuration list for PBXNativeTarget "Cow AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C516766A2121F9DC009840FC /* Debug */,
+				C516766B2121F9DC009840FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C516766C2121F9DC009840FC /* Build configuration list for PBXNativeTarget "Cow AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C516766D2121F9DC009840FC /* Debug */,
+				C516766E2121F9DC009840FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C51676322121F9DB009840FC /* Project object */;
+}
