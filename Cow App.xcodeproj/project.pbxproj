@@ -15,6 +15,8 @@
 		C516764D2121F9DC009840FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C516764C2121F9DC009840FC /* main.m */; };
 		C51676572121F9DC009840FC /* Cow_AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C51676562121F9DC009840FC /* Cow_AppTests.m */; };
 		C51676622121F9DC009840FC /* Cow_AppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C51676612121F9DC009840FC /* Cow_AppUITests.m */; };
+		C516767021220990009840FC /* cow_head.png in Resources */ = {isa = PBXBuildFile; fileRef = C516766F21220990009840FC /* cow_head.png */; };
+		C51676722122102F009840FC /* back_button.png in Resources */ = {isa = PBXBuildFile; fileRef = C51676712122102F009840FC /* back_button.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		C516765D2121F9DC009840FC /* Cow AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cow AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C51676612121F9DC009840FC /* Cow_AppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cow_AppUITests.m; sourceTree = "<group>"; };
 		C51676632121F9DC009840FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C516766F21220990009840FC /* cow_head.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cow_head.png; sourceTree = "<group>"; };
+		C51676712122102F009840FC /* back_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_button.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,8 @@
 				C51676432121F9DB009840FC /* Main.storyboard */,
 				C51676462121F9DC009840FC /* Assets.xcassets */,
 				C51676482121F9DC009840FC /* LaunchScreen.storyboard */,
+				C516766F21220990009840FC /* cow_head.png */,
+				C51676712122102F009840FC /* back_button.png */,
 				C516764B2121F9DC009840FC /* Info.plist */,
 				C516764C2121F9DC009840FC /* main.m */,
 			);
@@ -236,6 +242,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C516764A2121F9DC009840FC /* LaunchScreen.storyboard in Resources */,
+				C516767021220990009840FC /* cow_head.png in Resources */,
+				C51676722122102F009840FC /* back_button.png in Resources */,
 				C51676472121F9DC009840FC /* Assets.xcassets in Resources */,
 				C51676452121F9DB009840FC /* Main.storyboard in Resources */,
 			);
@@ -436,6 +444,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G442MF557V;
 				INFOPLIST_FILE = "Cow App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -453,6 +462,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G442MF557V;
 				INFOPLIST_FILE = "Cow App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
