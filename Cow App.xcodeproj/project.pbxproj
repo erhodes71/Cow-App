@@ -17,6 +17,9 @@
 		C51676622121F9DC009840FC /* Cow_AppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C51676612121F9DC009840FC /* Cow_AppUITests.m */; };
 		C516767021220990009840FC /* cow_head.png in Resources */ = {isa = PBXBuildFile; fileRef = C516766F21220990009840FC /* cow_head.png */; };
 		C51676722122102F009840FC /* back_button.png in Resources */ = {isa = PBXBuildFile; fileRef = C51676712122102F009840FC /* back_button.png */; };
+		C5E59C2E21247266003BA9F1 /* mainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E59C2D21247266003BA9F1 /* mainViewController.m */; };
+		C5E59C302124767B003BA9F1 /* mainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5E59C2F2124767B003BA9F1 /* mainTableViewCell.xib */; };
+		C5E59C33212476A9003BA9F1 /* mainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E59C32212476A9003BA9F1 /* mainTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,11 @@
 		C51676632121F9DC009840FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C516766F21220990009840FC /* cow_head.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cow_head.png; sourceTree = "<group>"; };
 		C51676712122102F009840FC /* back_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_button.png; sourceTree = "<group>"; };
+		C5E59C2C21247266003BA9F1 /* mainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mainViewController.h; sourceTree = "<group>"; };
+		C5E59C2D21247266003BA9F1 /* mainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mainViewController.m; sourceTree = "<group>"; };
+		C5E59C2F2124767B003BA9F1 /* mainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = mainTableViewCell.xib; sourceTree = "<group>"; };
+		C5E59C31212476A9003BA9F1 /* mainTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mainTableViewCell.h; sourceTree = "<group>"; };
+		C5E59C32212476A9003BA9F1 /* mainTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mainTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +118,11 @@
 				C51676402121F9DB009840FC /* ViewController.h */,
 				C51676412121F9DB009840FC /* ViewController.m */,
 				C51676432121F9DB009840FC /* Main.storyboard */,
+				C5E59C2F2124767B003BA9F1 /* mainTableViewCell.xib */,
+				C5E59C31212476A9003BA9F1 /* mainTableViewCell.h */,
+				C5E59C32212476A9003BA9F1 /* mainTableViewCell.m */,
+				C5E59C2C21247266003BA9F1 /* mainViewController.h */,
+				C5E59C2D21247266003BA9F1 /* mainViewController.m */,
 				C51676462121F9DC009840FC /* Assets.xcassets */,
 				C51676482121F9DC009840FC /* LaunchScreen.storyboard */,
 				C516766F21220990009840FC /* cow_head.png */,
@@ -243,6 +256,7 @@
 			files = (
 				C516764A2121F9DC009840FC /* LaunchScreen.storyboard in Resources */,
 				C516767021220990009840FC /* cow_head.png in Resources */,
+				C5E59C302124767B003BA9F1 /* mainTableViewCell.xib in Resources */,
 				C51676722122102F009840FC /* back_button.png in Resources */,
 				C51676472121F9DC009840FC /* Assets.xcassets in Resources */,
 				C51676452121F9DB009840FC /* Main.storyboard in Resources */,
@@ -273,6 +287,8 @@
 				C51676422121F9DB009840FC /* ViewController.m in Sources */,
 				C516764D2121F9DC009840FC /* main.m in Sources */,
 				C516763F2121F9DB009840FC /* AppDelegate.m in Sources */,
+				C5E59C2E21247266003BA9F1 /* mainViewController.m in Sources */,
+				C5E59C33212476A9003BA9F1 /* mainTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

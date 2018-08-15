@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="mainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="W0K-ok-mZM"/>
                         <viewControllerLayoutGuide type="bottom" id="mGX-mg-q6O"/>
@@ -33,6 +33,9 @@
                                         <state key="normal" title="Action">
                                             <color key="titleColor" red="0.02379884618" green="1" blue="0.86597965799999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="actionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B8H-Ie-DjP"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYh-lt-e8k">
                                         <rect key="frame" x="220" y="59" width="92" height="30"/>
@@ -42,6 +45,9 @@
                                         <state key="normal" title="Account">
                                             <color key="titleColor" red="0.02379884618" green="1" blue="0.86597965799999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="accountButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ald-Ga-Yf0"/>
+                                        </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cow_head.png" translatesAutoresizingMaskIntoConstraints="NO" id="VDd-DC-MdA">
                                         <rect key="frame" x="8" y="14" width="68" height="68"/>
@@ -65,6 +71,9 @@
                                 <state key="normal" title="Manage Herd">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="manageHerdButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WRo-Pq-dvi"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rui-MK-cFr">
                                 <rect key="frame" x="187" y="451" width="117" height="41"/>
@@ -74,6 +83,9 @@
                                 <state key="normal" title="Expenses">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="expensesButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="93R-7s-NYm"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total Number of Cows:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMH-T6-Qeq">
                                 <rect key="frame" x="9" y="105" width="191" height="21"/>
@@ -107,6 +119,10 @@
                                 <rect key="frame" x="9" y="215" width="301" height="212"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="YOu-nc-nRK"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="yJu-sl-aYw"/>
+                                </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$400" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2in-0z-ZvU">
                                 <rect key="frame" x="208" y="134" width="67" height="21"/>
@@ -118,6 +134,9 @@
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="QSK-e2-TfL" id="JmN-hn-poT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
