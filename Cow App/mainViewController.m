@@ -18,6 +18,13 @@
     
     
     NSMutableArray* data;
+    
+    UIViewController* signInViewController;
+    
+    //Used for when sending requests
+    int hold;
+    
+    bool doesTokenWork;
 }
 
 
@@ -30,6 +37,10 @@
     //This is to initialize the data array
     data = [NSMutableArray arrayWithObjects:nil];
     
+    [self checkCredentials];
+    
+    doesTokenWork = false;
+    
 }
 
 //This method is used to check if the user is on the device
@@ -41,6 +52,42 @@
     //  Password
     //  Token
     
+    //This loads the users data
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    
+    NSString* userName = [prefs stringForKey:@"userID"];
+    NSString* password = [prefs stringForKey:@"password"];
+    NSString* token = [prefs stringForKey:@"accessToken"];
+    
+    //Save data
+    /*[prefs setObject:userName forKey:@"userID"];
+    [prefs setObject:password forKey:@"password"];
+    [prefs setObject:token forKey:@"token"];*/
+    
+    
+    if(userName == NULL)
+    {
+        //Needs to sign into account
+        //Send to login view
+        [self changeViewSignIn];
+        
+    }else{
+        //Check token
+        [self checkIfTokenWorks];
+        
+        
+        if(doesTokenWork)
+        {
+            //Continue to main View
+        }else{
+            //Get new token by logging in
+            //Continue to main View
+        }
+        
+        
+        
+    }
+    
     
     
     //Check if username exists
@@ -49,6 +96,43 @@
             //then have it Initialsize View
         //Else
             //Send them to the account sign-in view
+}
+
+-(void)checkIfTokenWorks
+{
+    //Send request
+    //If returns token then set doesTokenWork = true
+    
+    
+    //TODO: Change to checking url
+    NSString* url = [NSString stringWithFormat:@"http://erhodes.oucreate.com/Dreamer/loadFeed.php"];
+    
+    
+    
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    [request setURL:[NSURL URLWithString:url]];
+    [request setHTTPMethod:@"GET"];
+    
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        NSString *requestReply = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
+        NSLog(@"requestReply: %@", requestReply);//This works well in getting the data
+        
+        
+        
+        
+        
+    }] resume];
+}
+
+
+-(void)changeViewSignIn
+{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    signInViewController = [storyboard instantiateViewControllerWithIdentifier:@"SignInViewController"];
+    [self addChildViewController:signInViewController];
+    [self.view addSubview:signInViewController.view];
 }
 
 
@@ -126,15 +210,7 @@
 //Gets the number of rows in the section
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    /*NSUInteger check;
-     //Note:
-     //  Make sure to have a check here or else it will just populate it with an empty field
-     if(start){
-     check = 0;
-     }
-     else{
-     check = [titleData count];
-     }*/
+   
     return 3;
 }
 

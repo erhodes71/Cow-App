@@ -225,10 +225,10 @@
             </objects>
             <point key="canvasLocation" x="769" y="862"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign In View Controller-->
         <scene sceneID="jh7-XM-i3V">
             <objects>
-                <viewController id="mZY-CQ-aqv" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignInViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mZY-CQ-aqv" customClass="SignInViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gIC-Z6-Fb5"/>
                         <viewControllerLayoutGuide type="bottom" id="MJe-ol-ZrP"/>
@@ -257,6 +257,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="mZY-CQ-aqv" id="qhQ-WK-jDT"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OwU-3d-WMc">
                                 <rect key="frame" x="16" y="225" width="166" height="21"/>
@@ -271,6 +274,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="mZY-CQ-aqv" id="dhc-p3-acj"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uy4-rz-bzC">
                                 <rect key="frame" x="121" y="382" width="78" height="30"/>
@@ -280,6 +286,9 @@
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" red="0.42153729880000002" green="0.85296533279999998" blue="0.94587920979999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitButtonPressed:" destination="mZY-CQ-aqv" eventType="touchUpInside" id="hTG-pK-L77"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pd3-DO-h2p">
                                 <rect key="frame" x="53" y="414" width="214" height="23"/>
@@ -287,6 +296,9 @@
                                 <state key="normal" title="or Create an Account here">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="createAccountButtonPressed:" destination="mZY-CQ-aqv" eventType="touchUpInside" id="IIa-4B-zAd"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please Sign-In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGe-Zo-Gt7">
                                 <rect key="frame" x="84" y="120" width="153" height="20"/>
@@ -298,6 +310,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.42153729880000002" green="0.85296533279999998" blue="0.94587920979999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="i56-3A-zAB" id="TNe-vj-xdp"/>
+                        <outlet property="usernameTextField" destination="NOY-Nc-HXh" id="DPv-a8-2QY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dUg-oJ-Pap" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
