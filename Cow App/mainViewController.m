@@ -58,7 +58,8 @@
     NSString* userName = [prefs stringForKey:@"userID"];
     NSString* password = [prefs stringForKey:@"password"];
     NSString* token = [prefs stringForKey:@"accessToken"];
-    
+    userName = @"erhodes71";
+    token = @"1234";
     //Save data
     /*[prefs setObject:userName forKey:@"userID"];
     [prefs setObject:password forKey:@"password"];
@@ -100,14 +101,19 @@
 
 -(void)sendPost:(NSString*)username withToken:(NSString*)token
 {
+    //Can change the post data next
     NSString *post = [NSString stringWithFormat:@"username=%@&token=%@",username,token];
     NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
-    NSString *postLength = [NSString stringWithFormat:@"%d",[postData length]];
+    NSString *postLength = [NSString stringWithFormat:@"%lu",(unsigned long)[postData length]];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-    [request setURL:[NSURL URLWithString:@"http://erhodes.oucreate.com/Cows/test.php"]];
+    //[request setURL:[NSURL URLWithString:@"https://erhodes.oucreate.com/Cows/test.php"]];
+    [request setURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://erhodes.oucreate.com/Cows/test.php?username=%@&token=%@",username,token]]];
+
+    //[NSString stringWithFormat:@"https://erhodes.oucreate.com/Cows/test.php?username=%@&token=%@",username,token]
     [request setHTTPMethod:@"POST"];
     [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
-    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+    [request setValue:@"multipart/form-data" forHTTPHeaderField:@"Content-Type"];
+    //[request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
     [request setHTTPBody:postData];
 
     
@@ -123,7 +129,10 @@
 // This method is used to receive the data which we get using post method.
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData*)data
 {
-    NSLog(@"%@",data);
+    //Converts the data
+    NSString *someString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+
+    NSLog(@"%@",someString);
 }
 
 // This method receives the error report in case of connection is not made to server.
