@@ -25,6 +25,9 @@
     int hold;
     
     bool doesTokenWork;
+    
+    //This is used for when the request is sent
+    NSString* requestType;
 }
 
 
@@ -58,15 +61,17 @@
     NSString* userName = [prefs stringForKey:@"userID"];
     NSString* password = [prefs stringForKey:@"password"];
     NSString* token = [prefs stringForKey:@"accessToken"];
-    userName = @"erhodes71";
-    token = @"1234";
+    //userName = @"erhodes71";
+    //token = @"1234";
     //Save data
     /*[prefs setObject:userName forKey:@"userID"];
     [prefs setObject:password forKey:@"password"];
     [prefs setObject:token forKey:@"token"];*/
     
+    [self checkIfTokenWorks:userName withToken:token];
+    
     NSLog(@"This is the username: %@", userName);
-    if([userName  isEqual: @""])
+    if([userName isEqualToString:@""])
     {
         //Needs to sign into account
         //Send to login view
@@ -74,6 +79,8 @@
         
     }else{
         //Check token
+        
+        
         [self sendPost:userName withToken:token];
         
         
@@ -83,6 +90,7 @@
         }else{
             //Get new token by logging in
             //Continue to main View
+            
         }
         
         
@@ -99,6 +107,35 @@
             //Send them to the account sign-in view
 }
 
+
+-(void) checkIfTokenWorks:(NSString*)username withToken:(NSString*)token
+{
+    //Can change the post data next
+    NSString *post = [NSString stringWithFormat:@"username=%@&token=%@",username,token];
+    NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+    NSString *postLength = [NSString stringWithFormat:@"%lu",(unsigned long)[postData length]];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    //[request setURL:[NSURL URLWithString:@"https://erhodes.oucreate.com/Cows/test.php"]];
+    [request setURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://erhodes.oucreate.com/Cows/checkIfTokenWorks.php?username=%@&token=%@",username,token]]];
+    
+    [request setHTTPMethod:@"POST"];
+    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+    [request setValue:@"multipart/form-data" forHTTPHeaderField:@"Content-Type"];
+    //[request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+    [request setHTTPBody:postData];
+    
+    
+    NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    if(conn) {
+        NSLog(@"Connection Successful");
+    } else {
+        NSLog(@"Connection could not be made");
+    }
+    
+}
+
+
+//Send post
 -(void)sendPost:(NSString*)username withToken:(NSString*)token
 {
     //Can change the post data next
@@ -109,7 +146,6 @@
     //[request setURL:[NSURL URLWithString:@"https://erhodes.oucreate.com/Cows/test.php"]];
     [request setURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://erhodes.oucreate.com/Cows/test.php?username=%@&token=%@",username,token]]];
 
-    //[NSString stringWithFormat:@"https://erhodes.oucreate.com/Cows/test.php?username=%@&token=%@",username,token]
     [request setHTTPMethod:@"POST"];
     [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
     [request setValue:@"multipart/form-data" forHTTPHeaderField:@"Content-Type"];
@@ -132,7 +168,7 @@
     //Converts the data
     NSString *someString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 
-    NSLog(@"%@",someString);
+    NSLog(@"Test %@",someString);
 }
 
 // This method receives the error report in case of connection is not made to server.
@@ -148,32 +184,6 @@
     
 }
 
--(void)checkIfTokenWorks:(NSString*)username withToken:(NSString*)token
-{
-    //Send request
-    //If returns token then set doesTokenWork = true
-    
-    
-    //TODO: Change to checking url
-    NSString* url = [NSString stringWithFormat:@"http://erhodes.oucreate.com/Cows/checkIfTokenWorks.php?username=%@&token=&@",username,token];
-    
-    
-    
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-    [request setURL:[NSURL URLWithString:url]];
-    [request setHTTPMethod:@"GET"];
-    
-    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
-    [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        NSString *requestReply = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
-        NSLog(@"requestReply: %@", requestReply);//This works well in getting the data
-        
-        
-        
-        
-        
-    }] resume];
-}
 
 
 -(void)changeViewSignIn
