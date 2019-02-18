@@ -142,10 +142,10 @@
             </objects>
             <point key="canvasLocation" x="-80.799999999999997" y="130.88455772113943"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Account View Controller-->
         <scene sceneID="WlQ-ki-9tG">
             <objects>
-                <viewController id="cvX-X0-Kof" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreateAccountViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cvX-X0-Kof" customClass="CreateAccountViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YEq-yA-YyX"/>
                         <viewControllerLayoutGuide type="bottom" id="OrV-Fz-o9A"/>
@@ -207,6 +207,9 @@
                                 <rect key="frame" x="20" y="20" width="38" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="back_button.png"/>
+                                <connections>
+                                    <action selector="exitViewController:" destination="cvX-X0-Kof" eventType="touchUpInside" id="ERK-Jj-JM6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUY-7m-G8a">
                                 <rect key="frame" x="114" y="551" width="146" height="30"/>
@@ -216,10 +219,26 @@
                                 <state key="normal" title="Create Account!">
                                     <color key="titleColor" red="0.42153729880000002" green="0.85296533279999998" blue="0.94587920979999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="createAccountButtonPressed:" destination="cvX-X0-Kof" eventType="touchUpInside" id="Y7D-v4-NxJ"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="/comment_output" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GtE-Vb-1Fa">
+                                <rect key="frame" x="114" y="423" width="135" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.42153729880000002" green="0.85296533279999998" blue="0.94587920979999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <connections>
+                        <outlet property="commentLable" destination="GtE-Vb-1Fa" id="Xwk-KU-6xH"/>
+                        <outlet property="passwordTextField" destination="Y1g-J4-ROY" id="0yQ-MT-S2S"/>
+                        <outlet property="reEnterPasswordTextField" destination="8fx-SJ-6BO" id="Edr-rC-CqF"/>
+                        <outlet property="userNameTextField" destination="FZS-7u-OFq" id="dE1-zM-nKV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PyB-Hi-Wnm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -319,10 +338,10 @@
             </objects>
             <point key="canvasLocation" x="-80.625" y="861.97183098591552"/>
         </scene>
-        <!--View Controller-->
+        <!--Account View Controller-->
         <scene sceneID="6y4-bV-Ylk">
             <objects>
-                <viewController id="J8y-kc-zzP" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AccountViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="J8y-kc-zzP" customClass="AccountViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZkG-dZ-cai"/>
                         <viewControllerLayoutGuide type="bottom" id="xha-pz-h2x"/>
@@ -339,6 +358,9 @@
                                         <rect key="frame" x="6" y="8" width="38" height="38"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button" image="back_button.png"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="J8y-kc-zzP" eventType="touchUpInside" id="mVq-Je-UdE"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8LL-mV-a6I">
                                         <rect key="frame" x="126" y="48" width="120" height="35"/>
@@ -421,6 +443,9 @@
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitButtonPressed:" destination="J8y-kc-zzP" eventType="touchUpInside" id="aLq-V5-h0O"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MhA-91-DdP">
                                 <rect key="frame" x="130" y="584" width="114" height="37"/>
@@ -430,10 +455,27 @@
                                 <state key="normal" title="Logout">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="logoutButtonPressed:" destination="J8y-kc-zzP" eventType="touchUpInside" id="PTu-Y4-Ld0"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="/comment_label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ig2-OA-gib">
+                                <rect key="frame" x="109" y="492" width="157" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.02379884618" green="1" blue="0.86597965799999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <connections>
+                        <outlet property="PasswordTextField" destination="aBU-Kw-OPU" id="xp6-16-cOY"/>
+                        <outlet property="commentLabel" destination="ig2-OA-gib" id="EyF-5v-xnv"/>
+                        <outlet property="oldPasswordTextField" destination="xBI-N1-7sa" id="5Mq-0Z-crV"/>
+                        <outlet property="reTypeNewPasswordTextField" destination="v5D-2g-9wD" id="rva-Jv-liY"/>
+                        <outlet property="usernameLabel" destination="Tfu-78-nxN" id="l2Q-2S-cov"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fjO-PO-myq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

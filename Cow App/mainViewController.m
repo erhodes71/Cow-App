@@ -46,6 +46,16 @@
     
 }
 
+- (void)reInitializeView
+{
+    //This is to initialize the data array
+    data = [NSMutableArray arrayWithObjects:nil];
+    
+    [self checkCredentials];
+    
+    doesTokenWork = false;
+}
+
 //This method is used to check if the user is on the device
 -(void)checkCredentials
 {
@@ -184,6 +194,16 @@
     
 }
 
+//This will take you to the account managment page
+-(void)changeViewAccount
+{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    signInViewController = [storyboard instantiateViewControllerWithIdentifier:@"AccountViewController"];
+    [self addChildViewController:signInViewController];
+    [self.view addSubview:signInViewController.view];
+}
+
 
 
 -(void)changeViewSignIn
@@ -207,10 +227,12 @@
 //If the account button is pressed
 - (IBAction)accountButtonPressed:(id)sender {
     
-    
+    //Changes to the account view
+    [self changeViewAccount];
 }
 
 //Action button is pressed
+// Note, at the moment, this just clears the user data
 - (IBAction)actionButtonPressed:(id)sender {
     NSLog(@"Test");
     
