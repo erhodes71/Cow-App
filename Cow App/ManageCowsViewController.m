@@ -16,6 +16,30 @@
     NSMutableArray* cowNames;
     NSMutableArray* weights;
     NSMutableArray* cowIDs;
+    
+    NSMutableArray* DOBs;
+    NSMutableArray* dPurchased;
+    NSMutableArray* brands;
+    NSMutableArray* weightTimeLine;
+    NSMutableArray* amoundPaid;
+    NSMutableArray* amountSold;
+    NSMutableArray* weightBought;
+    NSMutableArray* weightSold;
+    NSMutableArray* calfInfo;
+    NSMutableArray* vaccs;
+    NSMutableArray* timeLines;
+    NSMutableArray* parents1s;
+    NSMutableArray* parents2s;
+    NSMutableArray* owned;
+    NSMutableArray* isAlive;
+    NSMutableArray* isRegistered;
+    NSMutableArray* boughtFrom;
+    NSMutableArray* soldTo;
+
+
+
+
+
 
 
 }
@@ -41,6 +65,61 @@
     //Cow IDs
     cowIDs = [NSMutableArray arrayWithObjects:nil];
     
+    //Date of birth
+    DOBs = [NSMutableArray arrayWithObjects:nil];
+    
+    //Date purchased
+    dPurchased = [NSMutableArray arrayWithObjects:nil];
+    
+    //Brands
+    brands = [NSMutableArray arrayWithObjects:nil];
+    
+    //Weight Time Line
+    weightTimeLine = [NSMutableArray arrayWithObjects:nil];
+    
+    //Amount Paid
+    amoundPaid = [NSMutableArray arrayWithObjects:nil];
+    
+    //Amount Sold
+    amountSold = [NSMutableArray arrayWithObjects:nil];
+    
+    //Weight Bought
+    weightBought = [NSMutableArray arrayWithObjects:nil];
+    
+    //Weight Sold
+    weightSold = [NSMutableArray arrayWithObjects:nil];
+    
+    //Calf Info
+    calfInfo = [NSMutableArray arrayWithObjects:nil];
+    
+    //Vaccinations
+    vaccs = [NSMutableArray arrayWithObjects:nil];
+    
+    //Timelines - dates that edits where made
+    timeLines = [NSMutableArray arrayWithObjects:nil];
+    
+    //Parent 1
+    parents1s = [NSMutableArray arrayWithObjects:nil];
+    
+    //Parent 2
+    parents2s = [NSMutableArray arrayWithObjects:nil];
+    
+    //Owned - bool
+    owned = [NSMutableArray arrayWithObjects:nil];
+    
+    //If is still alive
+    isAlive = [NSMutableArray arrayWithObjects:nil];
+    
+    //Is registered
+    isRegistered = [NSMutableArray arrayWithObjects:nil];
+    
+    //Bought from
+    boughtFrom = [NSMutableArray arrayWithObjects:nil];
+    
+    //Sold to
+    soldTo = [NSMutableArray arrayWithObjects:nil];
+    
+    
     [self loadCowData];
 }
 
@@ -60,7 +139,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     
-    return [cowNames count];
+    return [cowIDs count];
 }
 
 
@@ -80,8 +159,32 @@
         
     }
     
+    //Note: for date and times, for now we need to stick with - instead of /. Just for now.
+    
     cell.cowName.text = [cowNames objectAtIndex:indexPath.row];
     cell.weight.text = [weights objectAtIndex:indexPath.row];
+    cell.dateOfBirth.text = [DOBs objectAtIndex:indexPath.row];
+    cell.datePurchased.text = [dPurchased objectAtIndex:indexPath.row];
+    cell.brand.text = [brands objectAtIndex:indexPath.row];
+    cell.weightTimeLine.text = [weightTimeLine objectAtIndex:indexPath.row];
+    cell.amountPaid.text = [amoundPaid objectAtIndex:indexPath.row];
+    cell.weightBought.text = [weightBought objectAtIndex:indexPath.row];
+    cell.amountSold.text = [amountSold objectAtIndex:indexPath.row];
+    cell.weightSold.text = [weightSold objectAtIndex:indexPath.row];
+    cell.vaccinations.text = [vaccs objectAtIndex:indexPath.row];
+    cell.parent1.text = [parents1s objectAtIndex:indexPath.row];
+    cell.parent2.text = [parents2s objectAtIndex:indexPath.row];
+    cell.owned.text = [owned objectAtIndex:indexPath.row];
+    cell.isAlive.text = [isAlive objectAtIndex:indexPath.row];
+    cell.isRegistered.text = [isRegistered objectAtIndex:indexPath.row];
+    cell.boughtFrom.text = [boughtFrom objectAtIndex:indexPath.row];
+    cell.soldTo.text = [soldTo objectAtIndex:indexPath.row];
+    
+    //Calf info and timestamps. Both split by ! so you should be able to iterate through it.
+    cell.information.text = [calfInfo objectAtIndex:indexPath.row];
+
+
+    
 
     
     
@@ -90,7 +193,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 40;
+    return 690;
     // This is just Programatic method you can also do that by xib !
 }
 
@@ -167,11 +270,17 @@
     
     NSLog(@"Test %@",cows_seperate_lists_data);
     
+    //Incase there are no results to return
+    if([cows_seperate_lists_data  isEqual: @"null"])
+    {
+       //Do nothing
+    }else{
+    
     //Split up lists
     NSArray *lists = [cows_seperate_lists_data componentsSeparatedByString:@":"];
 
     //Names
-    NSString *truncatedString_names = [lists[0] stringByReplacingOccurrencesOfString:@"]" withString:@""];
+    /*NSString *truncatedString_names = [lists[0] stringByReplacingOccurrencesOfString:@"]" withString:@""];
     truncatedString_names = [truncatedString_names stringByReplacingOccurrencesOfString:@"[" withString:@""];
     NSArray* names = [truncatedString_names componentsSeparatedByString:@","];
     
@@ -184,6 +293,23 @@
     NSString *truncatedString_ID = [lists[2] stringByReplacingOccurrencesOfString:@"]" withString:@""];
     truncatedString_ID = [truncatedString_ID stringByReplacingOccurrencesOfString:@"[" withString:@""];
     NSArray* ID_array = [truncatedString_ID componentsSeparatedByString:@","];
+    
+    
+    //Date of births
+    NSString *truncatedString_DOB = [lists[3] stringByReplacingOccurrencesOfString:@"]" withString:@""];
+    truncatedString_DOB = [truncatedString_DOB stringByReplacingOccurrencesOfString:@"[" withString:@""];
+    NSArray* DOB_array = [truncatedString_DOB componentsSeparatedByString:@","];
+    
+    //Date purchased
+    NSString *truncatedString_DP = [lists[4] stringByReplacingOccurrencesOfString:@"]" withString:@""];
+    truncatedString_DP = [truncatedString_DP stringByReplacingOccurrencesOfString:@"[" withString:@""];
+    NSArray* DP_array = [truncatedString_DP componentsSeparatedByString:@","];
+    
+    //Brands
+    NSString *truncatedString_brands = [lists[5] stringByReplacingOccurrencesOfString:@"]" withString:@""];
+    truncatedString_brands = [truncatedString_brands stringByReplacingOccurrencesOfString:@"[" withString:@""];
+    NSArray* brands_array = [truncatedString_brands componentsSeparatedByString:@","];
+    
     
     
     //names: Iterate through each
@@ -211,12 +337,149 @@
         [cowIDs addObject:ii];
     }
     
+    //DOBs: Iterate through each
+    for(NSString* i in DOB_array)
+    {
+        NSString *ii = [i stringByReplacingOccurrencesOfString:@"\"" withString:@""];
+        NSLog(@"%@",ii);
+        [DOBs addObject:ii];
+    }
+    
+    //DP: Iterate through each
+    for(NSString* i in DP_array)
+    {
+        NSString *ii = [i stringByReplacingOccurrencesOfString:@"\"" withString:@""];
+        NSLog(@"%@",ii);
+        [dPurchased addObject:ii];
+    }
+    
+    //DP: Iterate through each
+    for(NSString* i in brands_array)
+    {
+        NSString *ii = [i stringByReplacingOccurrencesOfString:@"\"" withString:@""];
+        NSLog(@"%@",ii);
+        [brands addObject:ii];
+    }
+    */
+    //Test out names, wights, and ids
+    [self updateArray:lists[0] withArrayToAddToo:0];
+    [self updateArray:lists[1] withArrayToAddToo:1];
+    [self updateArray:lists[2] withArrayToAddToo:2];
+    [self updateArray:lists[3] withArrayToAddToo:3];
+    [self updateArray:lists[4] withArrayToAddToo:4];
+    [self updateArray:lists[5] withArrayToAddToo:5];
+    [self updateArray:lists[6] withArrayToAddToo:6];
+    [self updateArray:lists[7] withArrayToAddToo:7];
+    [self updateArray:lists[8] withArrayToAddToo:8];
+    [self updateArray:lists[9] withArrayToAddToo:9];
+    [self updateArray:lists[10] withArrayToAddToo:10];
+    [self updateArray:lists[11] withArrayToAddToo:11];
+    [self updateArray:lists[12] withArrayToAddToo:12];
+    [self updateArray:lists[13] withArrayToAddToo:13];
+    [self updateArray:lists[14] withArrayToAddToo:14];
+    [self updateArray:lists[15] withArrayToAddToo:15];
+    [self updateArray:lists[16] withArrayToAddToo:16];
+    [self updateArray:lists[17] withArrayToAddToo:17];
+    [self updateArray:lists[18] withArrayToAddToo:18];
+    [self updateArray:lists[19] withArrayToAddToo:19];
+    [self updateArray:lists[20] withArrayToAddToo:20];
+
+
+
+    
     //For each index add the cow information
     
     //Reload tableview
     [self.tableView reloadData];
 
+    }
+}
+
+//Breaks down the string and updates the array
+- (void) updateArray: (NSString*) rawString withArrayToAddToo:(int)arr
+{
+    //Cow IDs
+    NSString *truncatedString = [rawString stringByReplacingOccurrencesOfString:@"]" withString:@""];
+    truncatedString = [truncatedString stringByReplacingOccurrencesOfString:@"[" withString:@""];
+    NSArray* array_return = [truncatedString componentsSeparatedByString:@","];
     
+    //IDs: Iterate through each
+    for(NSString* i in array_return)
+    {
+        NSString *ii = [i stringByReplacingOccurrencesOfString:@"\"" withString:@""];
+        NSLog(@"%@",ii);
+        switch (arr) {
+            case 0:
+                [cowNames addObject:ii];
+                break;
+            case 1:
+                [weights addObject:ii];
+                break;
+            case 2:
+                [cowIDs addObject:ii];
+                break;
+            case 3:
+                [DOBs addObject:ii];
+                break;
+            case 4:
+                [dPurchased addObject:ii];
+                break;
+            case 5:
+                [brands addObject:ii];
+                break;
+            case 6:
+                [weightTimeLine addObject:ii];
+                break;
+            case 7:
+                [amoundPaid addObject:ii];
+                break;
+            case 8:
+                [amountSold addObject:ii];
+                break;
+            case 9:
+                [weightBought addObject:ii];
+                break;
+            case 10:
+                [weightSold addObject:ii];
+                break;
+            case 11:
+                [calfInfo addObject:ii];
+                break;
+            case 12:
+                [vaccs addObject:ii];
+                break;
+            case 13:
+                [timeLines addObject:ii];
+                break;
+            case 14:
+                [parents1s addObject:ii];
+                break;
+            case 15:
+                [parents2s addObject:ii];
+                break;
+            case 16:
+                [owned addObject:ii];
+                break;
+            case 17:
+                [isAlive addObject:ii];
+                break;
+            case 18:
+                [isRegistered addObject:ii];
+                break;
+            case 19:
+                [boughtFrom addObject:ii];
+                break;
+            case 20:
+                [soldTo addObject:ii];
+                break;
+                
+            default:
+                break;
+        }
+        
+    }
+    
+    //return array_return;
 }
 
 // This method receives the error report in case of connection is not made to server.
