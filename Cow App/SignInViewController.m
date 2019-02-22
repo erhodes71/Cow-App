@@ -105,29 +105,6 @@
         NSLog(@"Connection could not be made");
     }
     
-    //REMOVE BELOW -----------\/\/\/\/
-    
-    //Change this
-    NSString* url = [NSString stringWithFormat:@"http://erhodes.oucreate.com/Cows/accountSignIn.php?username=%@&password=%@",username,password];
-    
-    
-    [request setURL:[NSURL URLWithString:url]];
-    [request setHTTPMethod:@"GET"];
-    
-    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
-    [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        NSString *requestReply = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
-        NSLog(@"requestReply: %@", requestReply);
-        
-        
-        
-        
-        
-        //Sets so that the task can finish
-        //self->hold = 1;
-        
-        
-    }] resume];
 }
 
 // This method is used to receive the data which we get using post method.
@@ -153,10 +130,13 @@
         
         NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
         
+        NSString *trimmedToken = [token stringByTrimmingCharactersInSet:
+                                   [NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        
         //Save data
         [prefs setObject:username forKey:@"userID"];
         [prefs setObject:password forKey:@"password"];
-        [prefs setObject:token forKey:@"accessToken"];
+        [prefs setObject:trimmedToken forKey:@"accessToken"];
         
         
         //close the window

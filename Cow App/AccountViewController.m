@@ -176,6 +176,13 @@
     //Converts the data
     NSString *token = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     
+    NSUInteger length = [token length];
+    bool isToken = false;
+    if(length == 50)
+    {
+        isToken = true;
+    }
+    
     NSLog(@"Test %@",token);
     
     //This loads the users data
@@ -184,7 +191,7 @@
    
     
     //Set the data to new
-    if(confirmedPass)
+    if(confirmedPass && isToken)
     {
         //Save data
         [prefs setObject:newPassword forKey:@"password"];

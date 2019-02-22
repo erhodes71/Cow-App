@@ -68,6 +68,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+//Removes self from parent
 -(void)removeSelf
 {
     [self.view setHidden:true];

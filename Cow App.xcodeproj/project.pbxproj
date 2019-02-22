@@ -23,6 +23,9 @@
 		C5E59C2E21247266003BA9F1 /* mainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E59C2D21247266003BA9F1 /* mainViewController.m */; };
 		C5E59C302124767B003BA9F1 /* mainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5E59C2F2124767B003BA9F1 /* mainTableViewCell.xib */; };
 		C5E59C33212476A9003BA9F1 /* mainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E59C32212476A9003BA9F1 /* mainTableViewCell.m */; };
+		C5F7FC74221E2B64005B23FA /* ManageCowsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F7FC73221E2B64005B23FA /* ManageCowsViewController.m */; };
+		C5F7FC78221E2DCE005B23FA /* manageCowsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F7FC76221E2DCE005B23FA /* manageCowsTableViewCell.m */; };
+		C5F7FC79221E2DCE005B23FA /* manageCowsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5F7FC77221E2DCE005B23FA /* manageCowsTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +75,11 @@
 		C5E59C2F2124767B003BA9F1 /* mainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = mainTableViewCell.xib; sourceTree = "<group>"; };
 		C5E59C31212476A9003BA9F1 /* mainTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mainTableViewCell.h; sourceTree = "<group>"; };
 		C5E59C32212476A9003BA9F1 /* mainTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mainTableViewCell.m; sourceTree = "<group>"; };
+		C5F7FC72221E2B64005B23FA /* ManageCowsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ManageCowsViewController.h; sourceTree = "<group>"; };
+		C5F7FC73221E2B64005B23FA /* ManageCowsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ManageCowsViewController.m; sourceTree = "<group>"; };
+		C5F7FC75221E2DCE005B23FA /* manageCowsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = manageCowsTableViewCell.h; sourceTree = "<group>"; };
+		C5F7FC76221E2DCE005B23FA /* manageCowsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = manageCowsTableViewCell.m; sourceTree = "<group>"; };
+		C5F7FC77221E2DCE005B23FA /* manageCowsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = manageCowsTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +135,8 @@
 				C51676402121F9DB009840FC /* ViewController.h */,
 				C51676412121F9DB009840FC /* ViewController.m */,
 				C51676432121F9DB009840FC /* Main.storyboard */,
+				C5F7FC72221E2B64005B23FA /* ManageCowsViewController.h */,
+				C5F7FC73221E2B64005B23FA /* ManageCowsViewController.m */,
 				C5E41FC5221A0AA200641CF3 /* AccountViewController.h */,
 				C5E41FC6221A0AA200641CF3 /* AccountViewController.m */,
 				C5E41FC22219F71700641CF3 /* CreateAccountViewController.h */,
@@ -136,6 +146,9 @@
 				C5E59C2F2124767B003BA9F1 /* mainTableViewCell.xib */,
 				C5E59C31212476A9003BA9F1 /* mainTableViewCell.h */,
 				C5E59C32212476A9003BA9F1 /* mainTableViewCell.m */,
+				C5F7FC75221E2DCE005B23FA /* manageCowsTableViewCell.h */,
+				C5F7FC76221E2DCE005B23FA /* manageCowsTableViewCell.m */,
+				C5F7FC77221E2DCE005B23FA /* manageCowsTableViewCell.xib */,
 				C5E59C2C21247266003BA9F1 /* mainViewController.h */,
 				C5E59C2D21247266003BA9F1 /* mainViewController.m */,
 				C51676462121F9DC009840FC /* Assets.xcassets */,
@@ -274,6 +287,7 @@
 				C5E59C302124767B003BA9F1 /* mainTableViewCell.xib in Resources */,
 				C51676722122102F009840FC /* back_button.png in Resources */,
 				C51676472121F9DC009840FC /* Assets.xcassets in Resources */,
+				C5F7FC79221E2DCE005B23FA /* manageCowsTableViewCell.xib in Resources */,
 				C51676452121F9DB009840FC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5F7FC74221E2B64005B23FA /* ManageCowsViewController.m in Sources */,
 				C51676422121F9DB009840FC /* ViewController.m in Sources */,
 				C5E41FC42219F71700641CF3 /* CreateAccountViewController.m in Sources */,
 				C516764D2121F9DC009840FC /* main.m in Sources */,
@@ -306,6 +321,7 @@
 				C5E59C2E21247266003BA9F1 /* mainViewController.m in Sources */,
 				C53915972124A0E800BB33ED /* SignInViewController.m in Sources */,
 				C5E41FC7221A0AA200641CF3 /* AccountViewController.m in Sources */,
+				C5F7FC78221E2DCE005B23FA /* manageCowsTableViewCell.m in Sources */,
 				C5E59C33212476A9003BA9F1 /* mainTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

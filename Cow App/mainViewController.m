@@ -20,6 +20,7 @@
     NSMutableArray* data;
     
     UIViewController* signInViewController;
+    UIViewController* manageCowViewController;
     
     //Used for when sending requests
     int hold;
@@ -194,6 +195,17 @@
     
 }
 
+//This will take you to the manage herd page
+-(void)changeViewManageCow
+{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    manageCowViewController = [storyboard instantiateViewControllerWithIdentifier:@"ManageCowsViewController"];
+    [self addChildViewController:manageCowViewController];
+    [self.view addSubview:manageCowViewController.view];
+}
+
+
 //This will take you to the account managment page
 -(void)changeViewAccount
 {
@@ -224,6 +236,7 @@
     
 }
 
+
 //If the account button is pressed
 - (IBAction)accountButtonPressed:(id)sender {
     
@@ -234,21 +247,27 @@
 //Action button is pressed
 // Note, at the moment, this just clears the user data
 - (IBAction)actionButtonPressed:(id)sender {
-    NSLog(@"Test");
+    //NSLog(@"Test");
     
     //This loads the users data
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
    
     
     //Save data
-    [prefs setObject:@"" forKey:@"userID"];
+    /*[prefs setObject:@"" forKey:@"userID"];
     [prefs setObject:@"" forKey:@"password"];
-     [prefs setObject:@"" forKey:@"accessToken"];
+     [prefs setObject:@"" forKey:@"accessToken"];*/
+    
+    
+    NSString* token = [prefs stringForKey:@"accessToken"];
+    NSLog(@"TOKEN: %@", token);
+    
+    
 }
 
 //Manage herd button is pressed
 - (IBAction)manageHerdButtonPressed:(id)sender {
-    
+    [self changeViewManageCow];
 }
 
 
