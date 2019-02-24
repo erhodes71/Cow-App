@@ -8,6 +8,7 @@
 
 #import "mainViewController.h"
 #import "mainTableViewCell.h"
+#import "EditCowViewController.h"
 
 @interface mainViewController ()
 
@@ -37,6 +38,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
+    //Clears current cow ID
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+
+    [prefs setObject:@"" forKey:@"CURRENT_COW_ID"];
     
     //This is to initialize the data array
     data = [NSMutableArray arrayWithObjects:nil];
@@ -203,6 +210,9 @@
     manageCowViewController = [storyboard instantiateViewControllerWithIdentifier:@"ManageCowsViewController"];
     [self addChildViewController:manageCowViewController];
     [self.view addSubview:manageCowViewController.view];
+    
+    
+    
 }
 
 

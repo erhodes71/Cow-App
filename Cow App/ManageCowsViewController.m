@@ -8,6 +8,7 @@
 
 #import "ManageCowsViewController.h"
 #import "manageCowsTableViewCell.h"
+#import "EditCowViewController.h"
 
 @interface ManageCowsViewController ()
 {
@@ -37,8 +38,9 @@
     NSMutableArray* soldTo;
 
 
+    
 
-
+    UIViewController* editCowViewController;
 
 
 
@@ -132,6 +134,28 @@
 {
     NSLog(@"%ld", (long)indexPath.row);
     
+    //Save the current cow to be used for following view
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    
+    NSString *cowID = cowIDs[(int)indexPath.row];
+    [prefs setObject:cowID forKey:@"CURRENT_COW_ID"];
+    
+    NSLog(@"Cow ID: %@",cowID);
+    
+    
+    
+    
+    
+    //Go to Cow information page here
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    editCowViewController = [storyboard instantiateViewControllerWithIdentifier:@"EditCowViewController"];
+    [self addChildViewController:editCowViewController];
+    [self.view addSubview:editCowViewController.view];
+    
+    
+
 }
 
 
