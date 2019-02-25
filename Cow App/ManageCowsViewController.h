@@ -16,6 +16,11 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 
+@property (weak, nonatomic) IBOutlet UIButton *addCow;
+
+
+
+
 
 
 @end

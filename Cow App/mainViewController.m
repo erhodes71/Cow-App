@@ -39,6 +39,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    //Round the corners of the buttons
+    _actionButton.layer.cornerRadius = 5.0;
+    _accountButton.layer.cornerRadius = 5.0;
+    _manageHerdButton.layer.cornerRadius = 5.0;
+    _expensesButton.layer.cornerRadius = 5.0;
+    
     
     //Clears current cow ID
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];

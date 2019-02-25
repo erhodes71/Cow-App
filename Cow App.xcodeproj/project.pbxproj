@@ -25,6 +25,7 @@
 		C5E59C33212476A9003BA9F1 /* mainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E59C32212476A9003BA9F1 /* mainTableViewCell.m */; };
 		C5ECD699222112A000BBE409 /* EditCowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5ECD698222112A000BBE409 /* EditCowViewController.m */; };
 		C5ECD69C2221D23900BBE409 /* MoreInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5ECD69B2221D23900BBE409 /* MoreInfoViewController.m */; };
+		C5ECD69F222334BE00BBE409 /* AddCowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5ECD69E222334BE00BBE409 /* AddCowViewController.m */; };
 		C5F7FC74221E2B64005B23FA /* ManageCowsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F7FC73221E2B64005B23FA /* ManageCowsViewController.m */; };
 		C5F7FC78221E2DCE005B23FA /* manageCowsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F7FC76221E2DCE005B23FA /* manageCowsTableViewCell.m */; };
 		C5F7FC79221E2DCE005B23FA /* manageCowsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5F7FC77221E2DCE005B23FA /* manageCowsTableViewCell.xib */; };
@@ -81,6 +82,8 @@
 		C5ECD698222112A000BBE409 /* EditCowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditCowViewController.m; sourceTree = "<group>"; };
 		C5ECD69A2221D23900BBE409 /* MoreInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoreInfoViewController.h; sourceTree = "<group>"; };
 		C5ECD69B2221D23900BBE409 /* MoreInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoreInfoViewController.m; sourceTree = "<group>"; };
+		C5ECD69D222334BE00BBE409 /* AddCowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddCowViewController.h; sourceTree = "<group>"; };
+		C5ECD69E222334BE00BBE409 /* AddCowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddCowViewController.m; sourceTree = "<group>"; };
 		C5F7FC72221E2B64005B23FA /* ManageCowsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ManageCowsViewController.h; sourceTree = "<group>"; };
 		C5F7FC73221E2B64005B23FA /* ManageCowsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ManageCowsViewController.m; sourceTree = "<group>"; };
 		C5F7FC75221E2DCE005B23FA /* manageCowsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = manageCowsTableViewCell.h; sourceTree = "<group>"; };
@@ -141,6 +144,8 @@
 				C51676402121F9DB009840FC /* ViewController.h */,
 				C51676412121F9DB009840FC /* ViewController.m */,
 				C51676432121F9DB009840FC /* Main.storyboard */,
+				C5ECD69D222334BE00BBE409 /* AddCowViewController.h */,
+				C5ECD69E222334BE00BBE409 /* AddCowViewController.m */,
 				C5ECD69A2221D23900BBE409 /* MoreInfoViewController.h */,
 				C5ECD69B2221D23900BBE409 /* MoreInfoViewController.m */,
 				C5ECD697222112A000BBE409 /* EditCowViewController.h */,
@@ -335,6 +340,7 @@
 				C5E41FC7221A0AA200641CF3 /* AccountViewController.m in Sources */,
 				C5F7FC78221E2DCE005B23FA /* manageCowsTableViewCell.m in Sources */,
 				C5E59C33212476A9003BA9F1 /* mainTableViewCell.m in Sources */,
+				C5ECD69F222334BE00BBE409 /* AddCowViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

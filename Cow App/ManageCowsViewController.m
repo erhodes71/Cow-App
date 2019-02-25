@@ -42,7 +42,10 @@
 
     UIViewController* editCowViewController;
 
-
+    UIViewController* addCowViewController;
+    
+    
+    NSString* dataFromRequest;
 
 }
 
@@ -53,6 +56,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    //This will be data that is collected
+    dataFromRequest = @"";
+    
+    
+    
+    //Rounds corner of button
+    _addCow.layer.cornerRadius = 5.0;
+    
+    
     
     
     //This is to initialize the data array
@@ -195,7 +208,21 @@
     cell.weightBought.text = [weightBought objectAtIndex:indexPath.row];
     cell.amountSold.text = [amountSold objectAtIndex:indexPath.row];
     cell.weightSold.text = [weightSold objectAtIndex:indexPath.row];
-    cell.vaccinations.text = [vaccs objectAtIndex:indexPath.row];
+    
+    //Needs to be broken appart
+    NSString* linesOfVaccs = [vaccs objectAtIndex:indexPath.row];
+    NSArray* linesV = [linesOfVaccs componentsSeparatedByString:@"!"];
+    //NSString* linesOfInfo = [calfInfo objectAtIndex:indexPath.row];
+    NSString* outPut_vaccs = @"";
+    for(NSString* s in linesV)
+    {
+        if(![s isEqualToString:@""]){
+            NSLog(@"TEST: %@",s);
+            outPut_vaccs = [NSString stringWithFormat:@"%@%@\n---------\n",outPut_vaccs,s];
+        }
+    }
+    cell.vaccinations.text = outPut_vaccs;//[vaccs objectAtIndex:indexPath.row];
+    
     cell.parent1.text = [parents1s objectAtIndex:indexPath.row];
     cell.parent2.text = [parents2s objectAtIndex:indexPath.row];
     cell.owned.text = [owned objectAtIndex:indexPath.row];
@@ -205,7 +232,18 @@
     cell.soldTo.text = [soldTo objectAtIndex:indexPath.row];
     
     //Calf info and timestamps. Both split by ! so you should be able to iterate through it.
-    cell.information.text = [calfInfo objectAtIndex:indexPath.row];
+    NSString* linesOfInfo = [calfInfo objectAtIndex:indexPath.row];
+    NSArray* lines = [linesOfInfo componentsSeparatedByString:@"!"];
+    //NSString* linesOfInfo = [calfInfo objectAtIndex:indexPath.row];
+    NSString* outPut_calfInfo = @"";
+    for(NSString* s in lines)
+    {
+        if(![s isEqualToString:@""]){
+            NSLog(@"TEST: %@",s);
+            outPut_calfInfo = [NSString stringWithFormat:@"%@%@\n---------\n",outPut_calfInfo,s];
+        }
+    }
+    cell.information.text = outPut_calfInfo; //[calfInfo objectAtIndex:indexPath.row];
 
 
     
@@ -260,7 +298,7 @@
     NSString* userName = [prefs stringForKey:@"userID"];
     NSString* token = [prefs stringForKey:@"accessToken"];
     
-    //Can change the post data next
+    //Can change the post data next dataUsingEncoding:NSUTF8StringEncoding
     NSString *post = [NSString stringWithFormat:@"userID=%@&token=%@&q=%@",userName,token,@"QueryByName"];
     NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
     NSString *postLength = [NSString stringWithFormat:@"%lu",(unsigned long)[postData length]];
@@ -292,8 +330,10 @@
     //Converts the data
     NSString *cows_seperate_lists_data = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     
-    NSLog(@"Test %@",cows_seperate_lists_data);
+    dataFromRequest = [NSString stringWithFormat:@"%@%@",dataFromRequest,cows_seperate_lists_data];
     
+    //NSLog(@"Test %@",cows_seperate_lists_data);
+    /*
     //Incase there are no results to return
     if([cows_seperate_lists_data  isEqual: @"null"])
     {
@@ -301,7 +341,7 @@
     }else{
     
     //Split up lists
-    NSArray *lists = [cows_seperate_lists_data componentsSeparatedByString:@":"];
+    NSArray *lists = [cows_seperate_lists_data componentsSeparatedByString:@":"];*/
 
     //Names
     /*NSString *truncatedString_names = [lists[0] stringByReplacingOccurrencesOfString:@"]" withString:@""];
@@ -386,7 +426,7 @@
     }
     */
     //Test out names, wights, and ids
-    [self updateArray:lists[0] withArrayToAddToo:0];
+    /*[self updateArray:lists[0] withArrayToAddToo:0];
     [self updateArray:lists[1] withArrayToAddToo:1];
     [self updateArray:lists[2] withArrayToAddToo:2];
     [self updateArray:lists[3] withArrayToAddToo:3];
@@ -414,9 +454,9 @@
     //For each index add the cow information
     
     //Reload tableview
-    [self.tableView reloadData];
+    [self.tableView reloadData];*/
 
-    }
+    //}
 }
 
 //Breaks down the string and updates the array
@@ -431,6 +471,8 @@
     for(NSString* i in array_return)
     {
         NSString *ii = [i stringByReplacingOccurrencesOfString:@"\"" withString:@""];
+        //NSString *ii = i;
+
         NSLog(@"%@",ii);
         switch (arr) {
             case 0:
@@ -517,7 +559,75 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
     
+    NSLog(@"This is a test.");
+    
+    //Converts the data
+    //NSString *cows_seperate_lists_data = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    
+    
+    
+    
+    NSLog(@"Test %@",dataFromRequest);
+    
+    //Incase there are no results to return
+    if([dataFromRequest  isEqual: @"null"])
+    {
+        //Do nothing
+    }else{
+        
+        //Split up lists
+        NSArray *lists = [dataFromRequest componentsSeparatedByString:@":"];
+        
+        
+        //Test out names, wights, and ids
+         [self updateArray:lists[0] withArrayToAddToo:0];
+         [self updateArray:lists[1] withArrayToAddToo:1];
+         [self updateArray:lists[2] withArrayToAddToo:2];
+         [self updateArray:lists[3] withArrayToAddToo:3];
+         [self updateArray:lists[4] withArrayToAddToo:4];
+         [self updateArray:lists[5] withArrayToAddToo:5];
+         [self updateArray:lists[6] withArrayToAddToo:6];
+         [self updateArray:lists[7] withArrayToAddToo:7];
+         [self updateArray:lists[8] withArrayToAddToo:8];
+         [self updateArray:lists[9] withArrayToAddToo:9];
+         [self updateArray:lists[10] withArrayToAddToo:10];
+         [self updateArray:lists[11] withArrayToAddToo:11];
+         [self updateArray:lists[12] withArrayToAddToo:12];
+         [self updateArray:lists[13] withArrayToAddToo:13];
+         [self updateArray:lists[14] withArrayToAddToo:14];
+         [self updateArray:lists[15] withArrayToAddToo:15];
+         [self updateArray:lists[16] withArrayToAddToo:16];
+         [self updateArray:lists[17] withArrayToAddToo:17];
+         [self updateArray:lists[18] withArrayToAddToo:18];
+         [self updateArray:lists[19] withArrayToAddToo:19];
+         [self updateArray:lists[20] withArrayToAddToo:20];
+         
+         
+         
+         
+         //For each index add the cow information
+         
+         //Reload tableview
+         [self.tableView reloadData];
+        
+    }
 }
+
+//Add cow button pressed
+//Creates new view
+- (IBAction)addCowButtonPressed:(id)sender {
+    
+    //Go to Cow information page here
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    addCowViewController = [storyboard instantiateViewControllerWithIdentifier:@"AddCowViewController"];
+    [self addChildViewController:addCowViewController];
+    [self.view addSubview:addCowViewController.view];
+}
+
+
+
 
 
 

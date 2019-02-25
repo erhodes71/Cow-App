@@ -14,6 +14,11 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 
+@property (weak, nonatomic) IBOutlet UIButton *actionButton;
+@property (weak, nonatomic) IBOutlet UIButton *accountButton;
+@property (weak, nonatomic) IBOutlet UIButton *manageHerdButton;
+@property (weak, nonatomic) IBOutlet UIButton *expensesButton;
+
 
 
 @end
