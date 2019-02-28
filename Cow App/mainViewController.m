@@ -9,6 +9,7 @@
 #import "mainViewController.h"
 #import "mainTableViewCell.h"
 #import "EditCowViewController.h"
+#import "ExpensesViewController.h"
 
 @interface mainViewController ()
 
@@ -22,6 +23,7 @@
     
     UIViewController* signInViewController;
     UIViewController* manageCowViewController;
+    UIViewController* expensesViewController;
     
     //Used for when sending requests
     int hold;
@@ -44,6 +46,7 @@
     _accountButton.layer.cornerRadius = 5.0;
     _manageHerdButton.layer.cornerRadius = 5.0;
     _expensesButton.layer.cornerRadius = 5.0;
+    _tableView.layer.cornerRadius = 5.0;
     
     
     //Clears current cow ID
@@ -233,6 +236,17 @@
 }
 
 
+//
+-(void)changeViewExpenses
+{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    expensesViewController = [storyboard instantiateViewControllerWithIdentifier:@"ExpensesViewController"];
+    [self addChildViewController:expensesViewController];
+    [self.view addSubview:expensesViewController.view];
+}
+
+
 
 -(void)changeViewSignIn
 {
@@ -289,7 +303,7 @@
 
 //Expenses button is pressed
 - (IBAction)expensesButtonPressed:(id)sender {
-    
+    [self changeViewExpenses];
 }
 
 

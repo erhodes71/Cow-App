@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C5144EA622252238007CA719 /* ExpensesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5144EA522252238007CA719 /* ExpensesViewController.m */; };
+		C5144EAD222526E2007CA719 /* ExpensesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5144EAB222526E2007CA719 /* ExpensesTableViewCell.m */; };
+		C5144EAE222526E2007CA719 /* ExpensesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5144EAC222526E2007CA719 /* ExpensesTableViewCell.xib */; };
+		C5144EB122252CE3007CA719 /* EditExpensesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5144EB022252CE3007CA719 /* EditExpensesViewController.m */; };
+		C5144EB422252F53007CA719 /* AddExpenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5144EB322252F53007CA719 /* AddExpenseViewController.m */; };
 		C516763F2121F9DB009840FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C516763E2121F9DB009840FC /* AppDelegate.m */; };
 		C51676422121F9DB009840FC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C51676412121F9DB009840FC /* ViewController.m */; };
 		C51676452121F9DB009840FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C51676432121F9DB009840FC /* Main.storyboard */; };
@@ -49,6 +54,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C5144EA422252238007CA719 /* ExpensesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExpensesViewController.h; sourceTree = "<group>"; };
+		C5144EA522252238007CA719 /* ExpensesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExpensesViewController.m; sourceTree = "<group>"; };
+		C5144EAA222526E2007CA719 /* ExpensesTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExpensesTableViewCell.h; sourceTree = "<group>"; };
+		C5144EAB222526E2007CA719 /* ExpensesTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExpensesTableViewCell.m; sourceTree = "<group>"; };
+		C5144EAC222526E2007CA719 /* ExpensesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpensesTableViewCell.xib; sourceTree = "<group>"; };
+		C5144EAF22252CE3007CA719 /* EditExpensesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditExpensesViewController.h; sourceTree = "<group>"; };
+		C5144EB022252CE3007CA719 /* EditExpensesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditExpensesViewController.m; sourceTree = "<group>"; };
+		C5144EB222252F53007CA719 /* AddExpenseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddExpenseViewController.h; sourceTree = "<group>"; };
+		C5144EB322252F53007CA719 /* AddExpenseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddExpenseViewController.m; sourceTree = "<group>"; };
 		C516763A2121F9DB009840FC /* Cow App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cow App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C516763D2121F9DB009840FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C516763E2121F9DB009840FC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -144,6 +158,15 @@
 				C51676402121F9DB009840FC /* ViewController.h */,
 				C51676412121F9DB009840FC /* ViewController.m */,
 				C51676432121F9DB009840FC /* Main.storyboard */,
+				C5144EB222252F53007CA719 /* AddExpenseViewController.h */,
+				C5144EB322252F53007CA719 /* AddExpenseViewController.m */,
+				C5144EAF22252CE3007CA719 /* EditExpensesViewController.h */,
+				C5144EB022252CE3007CA719 /* EditExpensesViewController.m */,
+				C5144EAA222526E2007CA719 /* ExpensesTableViewCell.h */,
+				C5144EAB222526E2007CA719 /* ExpensesTableViewCell.m */,
+				C5144EAC222526E2007CA719 /* ExpensesTableViewCell.xib */,
+				C5144EA422252238007CA719 /* ExpensesViewController.h */,
+				C5144EA522252238007CA719 /* ExpensesViewController.m */,
 				C5ECD69D222334BE00BBE409 /* AddCowViewController.h */,
 				C5ECD69E222334BE00BBE409 /* AddCowViewController.m */,
 				C5ECD69A2221D23900BBE409 /* MoreInfoViewController.h */,
@@ -297,6 +320,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5144EAE222526E2007CA719 /* ExpensesTableViewCell.xib in Resources */,
 				C516764A2121F9DC009840FC /* LaunchScreen.storyboard in Resources */,
 				C516767021220990009840FC /* cow_head.png in Resources */,
 				C5E59C302124767B003BA9F1 /* mainTableViewCell.xib in Resources */,
@@ -329,18 +353,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5F7FC74221E2B64005B23FA /* ManageCowsViewController.m in Sources */,
+				C5144EB422252F53007CA719 /* AddExpenseViewController.m in Sources */,
 				C51676422121F9DB009840FC /* ViewController.m in Sources */,
 				C5E41FC42219F71700641CF3 /* CreateAccountViewController.m in Sources */,
 				C516764D2121F9DC009840FC /* main.m in Sources */,
 				C516763F2121F9DB009840FC /* AppDelegate.m in Sources */,
 				C5ECD69C2221D23900BBE409 /* MoreInfoViewController.m in Sources */,
 				C5ECD699222112A000BBE409 /* EditCowViewController.m in Sources */,
+				C5144EB122252CE3007CA719 /* EditExpensesViewController.m in Sources */,
 				C5E59C2E21247266003BA9F1 /* mainViewController.m in Sources */,
 				C53915972124A0E800BB33ED /* SignInViewController.m in Sources */,
+				C5144EA622252238007CA719 /* ExpensesViewController.m in Sources */,
 				C5E41FC7221A0AA200641CF3 /* AccountViewController.m in Sources */,
 				C5F7FC78221E2DCE005B23FA /* manageCowsTableViewCell.m in Sources */,
 				C5E59C33212476A9003BA9F1 /* mainTableViewCell.m in Sources */,
 				C5ECD69F222334BE00BBE409 /* AddCowViewController.m in Sources */,
+				C5144EAD222526E2007CA719 /* ExpensesTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
