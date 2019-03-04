@@ -20,5 +20,18 @@
 @property (weak, nonatomic) IBOutlet UIButton *expensesButton;
 
 
+//Lables to be loaded
+@property (weak, nonatomic) IBOutlet UILabel *numberOfCowsLable;
+@property (weak, nonatomic) IBOutlet UILabel *numberOfExpensesLable;
+@property (weak, nonatomic) IBOutlet UILabel *monthlyBudgetLable;
+@property (weak, nonatomic) IBOutlet UILabel *totalExpenseCostLable;
+@property (weak, nonatomic) IBOutlet UILabel *availableSurplusLable;
+
+
+
+
+
+
+
 
 @end

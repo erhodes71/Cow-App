@@ -36,7 +36,7 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8a-UY-bcV">
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8a-UY-bcV">
                                         <rect key="frame" x="270" y="27" width="92" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -89,8 +89,8 @@
                                 <color key="textColor" red="0.02379884618" green="1" blue="0.86597965799999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCx-PT-OR8">
-                                <rect key="frame" x="323" y="128" width="43" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCx-PT-OR8">
+                                <rect key="frame" x="208" y="128" width="158" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.02379884618" green="1" blue="0.86597965799999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -119,8 +119,8 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="yJu-sl-aYw"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$400" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2in-0z-ZvU">
-                                <rect key="frame" x="299" y="153" width="67" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2in-0z-ZvU">
+                                <rect key="frame" x="208" y="153" width="158" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.02379884618" green="1" blue="0.86597965799999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -133,8 +133,8 @@
                                 <color key="textColor" red="0.02379884618" green="1" blue="0.86597965799999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$400" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6t-Pk-VPB">
-                                <rect key="frame" x="299" y="178" width="67" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6t-Pk-VPB">
+                                <rect key="frame" x="208" y="178" width="158" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.02379884618" green="1" blue="0.86597965799999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -147,8 +147,8 @@
                                 <color key="textColor" red="0.02379884618" green="1" blue="0.86597965799999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$400" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Z9-dl-4tp">
-                                <rect key="frame" x="299" y="202" width="67" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Z9-dl-4tp">
+                                <rect key="frame" x="208" y="202" width="158" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.02379884618" green="1" blue="0.86597965799999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -166,8 +166,8 @@
                                     <action selector="expensesButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="93R-7s-NYm"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZJ-da-dW1">
-                                <rect key="frame" x="323" y="105" width="43" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZJ-da-dW1">
+                                <rect key="frame" x="208" y="105" width="158" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.02379884618" green="1" blue="0.86597965799999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -179,9 +179,14 @@
                     <connections>
                         <outlet property="accountButton" destination="AYh-lt-e8k" id="tWm-G8-wkM"/>
                         <outlet property="actionButton" destination="o8a-UY-bcV" id="9Ct-e4-fZF"/>
+                        <outlet property="availableSurplusLable" destination="0Z9-dl-4tp" id="G4X-vg-UQf"/>
                         <outlet property="expensesButton" destination="rui-MK-cFr" id="uw6-Wc-xjK"/>
                         <outlet property="manageHerdButton" destination="0Bm-lP-8kd" id="PHy-r8-xfw"/>
+                        <outlet property="monthlyBudgetLable" destination="2in-0z-ZvU" id="dP7-Fg-iin"/>
+                        <outlet property="numberOfCowsLable" destination="iZJ-da-dW1" id="146-wV-UPn"/>
+                        <outlet property="numberOfExpensesLable" destination="vCx-PT-OR8" id="zKa-IP-SZB"/>
                         <outlet property="tableView" destination="QSK-e2-TfL" id="JmN-hn-poT"/>
+                        <outlet property="totalExpenseCostLable" destination="a6t-Pk-VPB" id="UYu-lV-Gi0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -556,6 +561,9 @@
                                 <state key="normal" title="remove cow">
                                     <color key="titleColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
                                 </state>
+                                <connections>
+                                    <action selector="removeButtonPressed:" destination="UKy-Nf-6Mr" eventType="touchUpInside" id="rx0-Uj-ce7"/>
+                                </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhS-ga-b18">
                                 <rect key="frame" x="9" y="382" width="135" height="21"/>
@@ -1520,8 +1528,8 @@
                                 <color key="textColor" red="0.02379884618" green="1" blue="0.86597965799999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="test" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tfu-78-nxN">
-                                <rect key="frame" x="184" y="105" width="112" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="test" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tfu-78-nxN">
+                                <rect key="frame" x="98" y="105" width="112" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.02379884618" green="1" blue="0.86597965799999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1600,21 +1608,50 @@
                                     <action selector="logoutButtonPressed:" destination="J8y-kc-zzP" eventType="touchUpInside" id="PTu-Y4-Ld0"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="/comment_label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ig2-OA-gib">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="/comment_label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ig2-OA-gib">
                                 <rect key="frame" x="109" y="492" width="157" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.02379884618" green="1" blue="0.86597965799999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="monthly budget" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b9v-G1-42m">
+                                <rect key="frame" x="240" y="100" width="126" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="7QE-u9-58i">
+                                <rect key="frame" x="177" y="184" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTQ-6P-dQP">
+                                <rect key="frame" x="240" y="138" width="126" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.42153729880000002" green="0.85296533279999998" blue="0.94587920979999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Update">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitButtonPressed:" destination="J8y-kc-zzP" eventType="touchUpInside" id="ed0-4B-zeh"/>
+                                    <action selector="updateButtonPressed:" destination="J8y-kc-zzP" eventType="touchUpInside" id="Qid-Un-ukT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
                         <outlet property="PasswordTextField" destination="aBU-Kw-OPU" id="xp6-16-cOY"/>
                         <outlet property="commentLabel" destination="ig2-OA-gib" id="EyF-5v-xnv"/>
+                        <outlet property="logoutButton" destination="MhA-91-DdP" id="Uh0-JZ-igy"/>
+                        <outlet property="monthlyBudgetTextField" destination="b9v-G1-42m" id="pRe-X0-Y67"/>
                         <outlet property="oldPasswordTextField" destination="xBI-N1-7sa" id="5Mq-0Z-crV"/>
                         <outlet property="reTypeNewPasswordTextField" destination="v5D-2g-9wD" id="rva-Jv-liY"/>
+                        <outlet property="spinner" destination="7QE-u9-58i" id="Pr6-mw-qtV"/>
+                        <outlet property="submitButton" destination="qK1-bM-zrf" id="DQh-fX-m2s"/>
+                        <outlet property="updateButton" destination="LTQ-6P-dQP" id="Y9H-FE-vAg"/>
                         <outlet property="usernameLabel" destination="Tfu-78-nxN" id="l2Q-2S-cov"/>
                     </connections>
                 </viewController>

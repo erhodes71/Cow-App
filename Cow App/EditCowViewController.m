@@ -210,11 +210,71 @@
     [self sendRequest:@"calfInfo" withValue:_commentTextView.text];
 }
 
+
+- (IBAction)removeButtonPressed:(id)sender {
+    [self sendDeleteRequest];
+}
+
+
+
+
+
 //---------------------
 
 
 
 //-----Sending request methods-----
+
+
+//Deletes the cow 
+-(void)sendDeleteRequest
+{
+    //Starts the spinner
+    [_spinner setHidden:false];
+    [_spinner startAnimating];
+    
+    
+    
+    //Load user data
+    //This loads the users data
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    
+    NSString* userName = [prefs stringForKey:@"userID"];
+    NSString* token = [prefs stringForKey:@"accessToken"];
+    NSString* cowID = [prefs stringForKey:@"CURRENT_COW_ID"];
+    
+    //Can change the post data next
+    NSString *post = [NSString stringWithFormat:@"userID=%@&token=%@&cowID=%@",userName,token,cowID];
+    NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+    NSString *postLength = [NSString stringWithFormat:@"%lu",(unsigned long)[postData length]];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    //[request setURL:[NSURL URLWithString:@"https://erhodes.oucreate.com/Cows/test.php"]];
+    [request setURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://erhodes.oucreate.com/Cows/removeCow.php"]]];
+    
+    [request setHTTPMethod:@"POST"];
+    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+    [request setValue:@"application/x-www-form-urlencoded"
+     //@"multipart/form-data"
+   forHTTPHeaderField:@"Content-Type"];
+    //[request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+    [request setHTTPBody:postData];
+    
+    
+    NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    if(conn) {
+        NSLog(@"Connection Successful");
+    } else {
+        NSLog(@"Connection could not be made");
+    }
+    
+}
+
+
+
+
+
+
+
 
 -(void)sendRequest: (NSString*)reqType withValue:(NSString*)value
 {
@@ -281,7 +341,13 @@
 }
 
 
-
+// This method is used to process the data after connection has made successfully.
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection
+{
+    //Stops the spinner from spinning
+    [_spinner setHidden:true];
+    [_spinner stopAnimating];
+}
 
 
 

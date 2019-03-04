@@ -27,6 +27,15 @@
     [self getUserData];
     confirmedPass = false;
     
+    //Rounds the buttons
+    _updateButton.layer.cornerRadius = 5.0;
+    _submitButton.layer.cornerRadius = 5.0;
+    _logoutButton.layer.cornerRadius = 5.0;
+    
+    //Spinner
+    [_spinner setHidden:true];
+    //[_spinner stopAnimating];
+    
 }
 
 
@@ -56,6 +65,9 @@
     //Send post request with new password, assuming the old one fits
     //Can make an update password script and send it
     
+    [_spinner setHidden:false];
+    [_spinner startAnimating];
+    
     //Call function
     [self changeCurrentPassword];
     
@@ -63,6 +75,60 @@
     
     
 }
+
+//Update button was pressed
+- (IBAction)updateButtonPressed:(id)sender {
+    
+    
+    [_spinner setHidden:false];
+    [_spinner startAnimating];
+    [self updateMonthlyBudget];
+   
+}
+
+
+
+
+-(void) updateMonthlyBudget
+{
+    
+    //This loads the users data
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    
+    NSString* userName = [prefs stringForKey:@"userID"];
+    //NSString* password = [prefs stringForKey:@"password"];
+    NSString* token = [prefs stringForKey:@"accessToken"];
+    NSString* budget = _monthlyBudgetTextField.text;
+    //Used to keep track of username and password
+    //username_final = username;
+    //password_final = password;
+    
+    //Can change the post data next
+    NSString *post = [NSString stringWithFormat:@"userID=%@&token=%@&budget=%@",userName,token,budget];
+    NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+    NSString *postLength = [NSString stringWithFormat:@"%lu",(unsigned long)[postData length]];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    //[request setURL:[NSURL URLWithString:@"https://erhodes.oucreate.com/Cows/test.php"]];
+    [request setURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://erhodes.oucreate.com/Cows/updateMonthlyBudget.php"]]];
+    
+    [request setHTTPMethod:@"POST"];
+    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+    [request setValue:@"application/x-www-form-urlencoded"
+     //@"multipart/form-data"
+   forHTTPHeaderField:@"Content-Type"];
+    //[request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+    [request setHTTPBody:postData];
+    
+    
+    NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    if(conn) {
+        NSLog(@"Connection Successful");
+    } else {
+        NSLog(@"Connection could not be made");
+    }
+    
+}
+
 
 //Changes the password, assuming the current one works
 - (void) changeCurrentPassword
@@ -120,6 +186,7 @@
 
 -(void)removeSelf
 {
+    [self.parentViewController viewDidLoad];
     [self.view setHidden:true];
     [self.view removeFromSuperview];
 }
@@ -220,6 +287,7 @@
     [_oldPasswordTextField resignFirstResponder];
     [_PasswordTextField resignFirstResponder];
     [_reTypeNewPasswordTextField resignFirstResponder];
+    [_monthlyBudgetTextField resignFirstResponder];
     
     
 }
@@ -228,7 +296,9 @@
 // This method is used to process the data after connection has made successfully.
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-    
+    //Stops and hides spinner
+    [_spinner setHidden:true];
+    [_spinner stopAnimating];
 }
 
 

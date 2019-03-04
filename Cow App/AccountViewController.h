@@ -17,7 +17,30 @@
 @property (weak, nonatomic) IBOutlet UITextField *reTypeNewPasswordTextField;
 
 
+@property (weak, nonatomic) IBOutlet UITextField *monthlyBudgetTextField;
+
+
+
+
 @property (weak, nonatomic) IBOutlet UILabel *commentLabel;
+
+
+@property (weak, nonatomic) IBOutlet UIButton *updateButton;
+
+@property (weak, nonatomic) IBOutlet UIButton *submitButton;
+
+@property (weak, nonatomic) IBOutlet UIButton *logoutButton;
+
+
+
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
+
+
+
+
+
+
+
 
 
 

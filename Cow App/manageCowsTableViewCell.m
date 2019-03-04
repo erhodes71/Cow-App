@@ -10,6 +10,14 @@
 
 @implementation manageCowsTableViewCell
 
+
+-(void)viewDidLoad
+{
+    _vaccinations.layer.cornerRadius = 5.0;
+    _information.layer.cornerRadius = 5.0;
+    
+}
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code

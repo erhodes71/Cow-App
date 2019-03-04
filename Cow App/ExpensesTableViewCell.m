@@ -10,6 +10,14 @@
 
 @implementation ExpensesTableViewCell
 
+
+//When the view loads
+-(void)viewDidLoad
+{
+    
+    _descriptionTextView.layer.cornerRadius = 5.0;
+}
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code

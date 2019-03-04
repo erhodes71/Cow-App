@@ -175,6 +175,7 @@
 //Removes self from parent
 -(void)removeSelf
 {
+    [self.parentViewController viewDidLoad];
     [self.view setHidden:true];
     [self.view removeFromSuperview];
 }

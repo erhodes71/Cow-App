@@ -10,4 +10,13 @@
 
 @interface mainTableViewCell : UITableViewCell
 
+
+@property (weak, nonatomic) IBOutlet UILabel *typeObject;
+
+@property (weak, nonatomic) IBOutlet UILabel *objectAltered;
+
+
+@property (weak, nonatomic) IBOutlet UILabel *dateAltered;
+
+
 @end
