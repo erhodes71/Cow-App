@@ -117,9 +117,12 @@
     objectsInActivty = [NSMutableArray arrayWithObjects:nil];
     dateActivity = [NSMutableArray arrayWithObjects:nil];
     
-    [self checkCredentials];
     
     doesTokenWork = false;
+    
+    [self checkCredentials];
+    
+    
 }
 
 //This method is used to check if the user is on the device
@@ -294,6 +297,7 @@
     {
         NSLog(@"TOKEN DOES NOT WORK");
         //Send to login
+        [self changeViewSignIn];
     }else{
         //Parse and load data
         recievedData = [recievedData stringByReplacingOccurrencesOfString:@"\"" withString:@""];

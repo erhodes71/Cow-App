@@ -18,6 +18,8 @@
     
     NSString* username;
     NSString* password;
+    
+    NSString* data_return;
 
     
     int hold;
@@ -29,6 +31,12 @@
     
     //Sets to 0 so that it is ready to process request
     hold = 0;
+    
+    //Data to return
+    data_return = @"";
+    
+    //Rounds the corner radius of button
+    _submitButton.layer.cornerRadius = 5.0;
 }
 
 
@@ -115,35 +123,7 @@
     
     NSLog(@"Test %@",token);
     
-    //If the data works, then close the window.
-    //Else inform the user that they need to create an account
-    if([token isEqualToString:@"This is not a current user."])
-    {
-        //Make this a comment on the app
-        NSLog(@"Please create an account");
-    }else{
-        //Save the data to the device
-        
-        //Sets the token
-        //NSString* token = requestReply;
-        NSLog(@"Token: %@",token);
-        
-        NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-        
-        NSString *trimmedToken = [token stringByTrimmingCharactersInSet:
-                                   [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        
-        //Save data
-        [prefs setObject:username forKey:@"userID"];
-        [prefs setObject:password forKey:@"password"];
-        [prefs setObject:trimmedToken forKey:@"accessToken"];
-        
-        
-        //close the window
-        //[self.view setHidden:true];
-        //[self.view removeFromSuperview];
-        [self removeSelf];
-    }
+    data_return = [NSString stringWithFormat:@"%@%@",data_return,token];
     
     
 }
@@ -158,13 +138,44 @@
 // This method is used to process the data after connection has made successfully.
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-    
+    //If the data works, then close the window.
+    //Else inform the user that they need to create an account
+    if([data_return isEqualToString:@"This is not a current user."])
+    {
+        //Make this a comment on the app
+        NSLog(@"Please create an account");
+    }else{
+        //Save the data to the device
+        
+        //Sets the token
+        //NSString* token = requestReply;
+        NSLog(@"Token: %@",data_return);
+        
+        NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+        
+        NSString *trimmedToken = [data_return stringByTrimmingCharactersInSet:
+                                  [NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        
+        //Save data
+        [prefs setObject:username forKey:@"userID"];
+        [prefs setObject:password forKey:@"password"];
+        [prefs setObject:trimmedToken forKey:@"accessToken"];
+        
+        
+        //close the window
+        //[self.view setHidden:true];
+        //[self.view removeFromSuperview];
+        [self removeSelf];
+    }
 }
 
 -(void)removeSelf
 {
+    NSLog(@"DATA: %@",data_return);
+    
     [self.view setHidden:true];
     [self.view removeFromSuperview];
+    [self.parentViewController viewDidLoad];
 }
 
 

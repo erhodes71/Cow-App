@@ -167,7 +167,7 @@
     //Go to home screen
     [self logout];
     [self removeSelf];
-    [self.parentViewController viewDidLoad];
+    //[self.parentViewController viewDidLoad];
 }
 
 - (void)logout
